@@ -1,0 +1,292 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "26cccfca1d98d7a6a72b31471efc74f2",
+    "entities": [
+      {
+        "tableName": "add_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `date` TEXT, `name` TEXT, `age` TEXT, `gender` TEXT, `address` TEXT, `district` TEXT, `contact` TEXT, `alternateContact` TEXT, `idCard` TEXT, `idCardValue` TEXT, `earProblem` TEXT, `hearingLoss` TEXT, `speechDelay` TEXT, `others` TEXT, `otoscopicImageLeft` TEXT, `otoscopicImageRight` TEXT, `waxLeft` TEXT, `waxRight` TEXT, `earDischargeLeft` TEXT, `earDischargeRight` TEXT, `perforationLeft` TEXT, `perforationRight` TEXT, `audiogramReport` TEXT, `audiogramLeft` TEXT, `audiogramRight` TEXT, `hearingAidTrialLeftEar` TEXT, `hearingAidTrialRightEar` TEXT, `hearingImprovement` TEXT, `noResponseR1` TEXT, `noResponseR2` TEXT, `noResponseR3` TEXT, `noResponseR4` TEXT, `noResponseR5` TEXT, `normalSpeech` TEXT, `delayedSpeech` TEXT, `stammering` TEXT, `misArticulation` TEXT, `puberphonia` TEXT, `earDischargeProblem` TEXT, `hearingProblem` TEXT, `earPerforation` TEXT, `speechProblem` TEXT, `othersFinalScreeningFinding` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "age",
+            "columnName": "age",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "district",
+            "columnName": "district",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contact",
+            "columnName": "contact",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "alternateContact",
+            "columnName": "alternateContact",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "idCard",
+            "columnName": "idCard",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "idCardValue",
+            "columnName": "idCardValue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "earProblem",
+            "columnName": "earProblem",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hearingLoss",
+            "columnName": "hearingLoss",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "speechDelay",
+            "columnName": "speechDelay",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "others",
+            "columnName": "others",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "otoscopicImageLeft",
+            "columnName": "otoscopicImageLeft",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "otoscopicImageRight",
+            "columnName": "otoscopicImageRight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waxLeft",
+            "columnName": "waxLeft",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "waxRight",
+            "columnName": "waxRight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "earDischargeLeft",
+            "columnName": "earDischargeLeft",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "earDischargeRight",
+            "columnName": "earDischargeRight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "perforationLeft",
+            "columnName": "perforationLeft",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "perforationRight",
+            "columnName": "perforationRight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "audiogramReport",
+            "columnName": "audiogramReport",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "audiogramLeft",
+            "columnName": "audiogramLeft",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "audiogramRight",
+            "columnName": "audiogramRight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hearingAidTrialLeftEar",
+            "columnName": "hearingAidTrialLeftEar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hearingAidTrialRightEar",
+            "columnName": "hearingAidTrialRightEar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hearingImprovement",
+            "columnName": "hearingImprovement",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noResponseR1",
+            "columnName": "noResponseR1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noResponseR2",
+            "columnName": "noResponseR2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noResponseR3",
+            "columnName": "noResponseR3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noResponseR4",
+            "columnName": "noResponseR4",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "noResponseR5",
+            "columnName": "noResponseR5",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "normalSpeech",
+            "columnName": "normalSpeech",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "delayedSpeech",
+            "columnName": "delayedSpeech",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stammering",
+            "columnName": "stammering",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "misArticulation",
+            "columnName": "misArticulation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "puberphonia",
+            "columnName": "puberphonia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "earDischargeProblem",
+            "columnName": "earDischargeProblem",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "hearingProblem",
+            "columnName": "hearingProblem",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "earPerforation",
+            "columnName": "earPerforation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "speechProblem",
+            "columnName": "speechProblem",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "othersFinalScreeningFinding",
+            "columnName": "othersFinalScreeningFinding",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '26cccfca1d98d7a6a72b31471efc74f2')"
+    ]
+  }
+}

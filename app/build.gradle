@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+def versionMajor = 1
+def versionMinor = 1
+def versionPatch = 1
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/services/'
+    }
+
+
+
+    defaultConfig {
+        applicationId "com.shukla.tech.hospitalapplication"
+        minSdkVersion 15
+        targetSdkVersion 29
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+        signingConfigs {
+            release {
+                storeFile file("vh.jks")
+                storePassword "123456Aa"
+                keyAlias "key0"
+                keyPassword "123456Aa"
+            }
+        }
+    }
+    buildTypes {
+        applicationVariants.all { variant ->
+
+            variant.outputs.all {
+                outputFileName = "vanispeech-" + "${variant.name}-${variant.versionName}.apk"
+            }
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    flavorDimensions("vani_hearing")
+
+    productFlavors {
+        prod {
+            applicationId = "com.shukla.tech.vanihearing"
+            versionName = "2_3_2020_07_33_PM"
+            versionCode = 8
+            dimension = "vani_hearing"
+            resValue "string", "app_name", "Vaani Speech"
+            buildConfigField "String", "APP_NAME", '"Vaani Speech"'
+            buildConfigField "String", "FLAVOUR", '"PROD"'
+        }
+    }
+}
+
+dependencies {
+    repositories {
+        mavenCentral()
+        maven { url "https://maven.google.com" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    }
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    annotationProcessor 'androidx.room:room-compiler:2.2.3'
+    implementation 'org.apache.poi:poi:3.15-beta2'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'org.apache.httpcomponents:httpmime:4.3.6'
+    implementation 'org.apache.httpcomponents:httpcore:4.3.3'
+    //noinspection DuplicatePlatformClasses
+    implementation 'org.apache.httpcomponents:httpclient:4.3.6'
+    //implementation 'com.github.mazenrashed:Printooth:1.2.1'
+    implementation 'androidx.room:room-runtime:2.2.3'
+    api 'com.squareup.okhttp3:okhttp:3.14.4'
+    api 'com.squareup.okio:okio:1.17.4'
+    api 'com.google.code.gson:gson:2.8.5'
+    //noinspection UseOfBundledGooglePlayServices
+    implementation 'com.google.android.gms:play-services:12.0.1'
+    testImplementation "org.robolectric:robolectric:4.2.1"
+    testImplementation "org.robolectric:robolectric-shadows:3.1"
+    testImplementation "org.mockito:mockito-core:2.0.86-beta"
+    implementation 'com.basgeekball:awesome-validation:1.3'
+}
